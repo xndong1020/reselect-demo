@@ -65,6 +65,10 @@ module.exports = {
             }
           },
           {
+            test: /(\.s(a|c)ss)$/,
+            use: ['style-loader', 'css-loader', 'sass-loader']
+          },
+          {
             loader: 'postcss-loader',
             options: {
               plugins: () => [require('cssnano')],

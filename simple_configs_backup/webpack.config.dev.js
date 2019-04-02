@@ -36,6 +36,10 @@ module.exports = {
         use: ["babel-loader", "eslint-loader"]
       },
       {
+        test: /(\.s(a|c)ss)$/,
+        use: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
         test: /(\.css)$/,
         use: ["style-loader", "css-loader"]
       }
