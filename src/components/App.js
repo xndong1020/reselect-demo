@@ -1,21 +1,23 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import HomePage from './home/HomePage'
-import AboutPage from './about/AboutPage'
-import Header from './common/Header'
-import PageNotFound from './PageNotFound'
+import Footer from './todos/Footer'
+import AddTodo from '../containers/AddTodo'
+import VisibleTodoList from '../containers/VisibleTodoList'
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper'
 
-function App() {
-  return (
-    <div className="container-fluid">
-      <Header />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/about" component={AboutPage} />
-        <Route component={PageNotFound} />
-      </Switch>
-    </div>
-  )
-}
+const App = () => (
+  <Grid
+    container
+    justify="center"
+    alignItems="center"
+    style={{ height: '90vh' }}
+  >
+    <Paper style={{ padding: '15em' }}>
+      <AddTodo />
+      <VisibleTodoList />
+      <Footer />
+    </Paper>
+  </Grid>
+)
 
 export default App
