@@ -1,9 +1,11 @@
 {
   "name": "react-redux-boilerplate",
   "description": "React boilerplate with Redux",
+  "homepage": "https://xndong1020.github.io/reselect-demo",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config ./configs/webpack.config.prod.js",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./configs/webpack.config.dev.js --port 3000 --open"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./configs/webpack.config.dev.js --port 3000 --open",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.3",
@@ -37,6 +39,7 @@
     "eslint-plugin-react": "7.12.4",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "fetch-mock": "7.3.1",
+    "gh-pages": "^2.0.1",
     "html-webpack-plugin": "3.2.0",
     "http-server": "0.11.1",
     "jest": "24.6.0",
